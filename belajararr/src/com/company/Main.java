@@ -5,25 +5,25 @@ public class Main {
     public static void main(String[] args) {
 
         double C, K, F, R;
-        String a = "\u00b0"; //kode ini untuk menampilkan simbol derajat pada java
+        String a = "\u00b0"; 
         String b; //di switch ini saya gunakan string untuk mengatasi ketika ada yang melakukan input dalam bentuk huruf
-        char ulang = 'y'; //karakter ini akan kita gunakan untuk perulangan agar pengguna aplikasi bisa mengulang input dari awal
+        char ulang = 'y'; 
         char e = 'y'; //karakter ini untuk perulangan ketika eror
-        Scanner rs = new Scanner(System.in); //pengenalan scanner dan pemberian nama scanner, scanner ini untuk melakukan input manual
-        while((ulang == 'y') || (ulang == 'Y')){ //titik perulangan
+        Scanner rs = new Scanner(System.in); 
+        while((ulang == 'y') || (ulang == 'Y')){ 
             e = 'y';
             System.out.println("Pilih salah satu");
             System.out.println("1. Konversi suhu Celcius");
             System.out.println("2. Konversi suhu Reamur");
             System.out.println("3. Konversi suhu Fahrenheit");
             System.out.println("4. Konversi suhu Kelvin");
-            b = rs.nextLine(); //input nilai b
-            while (e == 'y') { //untuk perulangan jika eror terjadi
-                switch (b) { //menggunakan nilai b untuk melanjutkan proses berdasar pilihan
+            b = rs.nextLine(); 
+            while (e == 'y') { 
+                switch (b) { 
                     case "1": {
                         System.out.println("Masukkan suhu Celcius interval 0-100");
                         C = rs.nextDouble();
-                        while ((C < 0) || (C > 100)) { //memberi interval nilai 0-100, jika tak sesuai program akan meminta input ulang
+                        while ((C < 0) || (C > 100)) { 
                             System.out.println("Masukkan dengan benar, hanya untuk interval 0-100");
                             C = rs.nextDouble();
                         }
